@@ -131,6 +131,22 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <img 
+            src="https://i.imgur.com/MRbnwKL.png"
+            alt="Aspidis Band Logo"
+            className="mx-auto h-32 md:h-48 w-auto drop-shadow-2xl"
+            onError={(e) => {
+              e.target.src = "https://i.imgur.com/MRbnwKL.jpg";
+            }}
+          />
+        </motion.div>
+        
         <motion.h1
           className="text-6xl md:text-8xl font-bold text-metal-white mb-6 text-glow"
           initial={{ opacity: 0, y: 50 }}
